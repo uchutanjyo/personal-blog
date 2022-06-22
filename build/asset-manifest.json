@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fcd4316f.css",
+    "main.js": "/static/js/main.ced20cf7.js",
+    "static/media/unreleased-1.mp3": "/static/media/unreleased-1.9b08d9084031dcacb72f.mp3",
+    "static/media/wami.mp3": "/static/media/wami.996c706a24f6c8909740.mp3",
+    "static/media/mite-portrait.png": "/static/media/mite-portrait.278337350615a4e5987d.png",
+    "static/media/mite-3.png": "/static/media/mite-3.9a11b6a9dcd00353ebb8.png",
+    "index.html": "/index.html",
+    "main.fcd4316f.css.map": "/static/css/main.fcd4316f.css.map",
+    "main.ced20cf7.js.map": "/static/js/main.ced20cf7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fcd4316f.css",
+    "static/js/main.ced20cf7.js"
+  ]
+}

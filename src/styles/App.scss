@@ -1,0 +1,103 @@
+// @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap");
+
+@mixin flexCenter($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: "Roboto Condensed", sans-serif;
+  @include flexCenter(column);
+}
+
+// buttons
+.default-button {
+  border-radius: 5%;
+  color: rgb(6, 6, 6);
+  padding: 1.1em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.Nav {
+  background-color: rgb(8, 10, 40);
+  width: 100vw;
+  height: 2em;
+  text-align: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  z-index: 1;
+  // background-color: rgb(75, 80, 151);
+}
+
+.Nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.7em;
+}
+
+.nav-title {
+  float: left;
+  top: 0;
+  margin-left: 2em;
+  color: rgb(255, 255, 255);
+  font-size: 1.7em;
+  cursor: default;
+}
+
+.Navbar-link {
+  margin-right: 2em;
+}
+
+// Blogpost
+.blog {
+  color: rgb(31, 31, 31);
+  background-color: rgba(201, 173, 173, 0.5);
+  padding: 1em;
+  margin: 1em;
+  list-style-type: none;
+  width: 70vw
+} 
+
+.go-to-post {
+  cursor: pointer
+}
+
+// Pagination
+.pagination-wrapper {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  button {
+    font-size:1.5em;
+  }
+}
+
+.pagination-number {
+  margin-right: .5em;
+}
+
+.pagination-selection {
+  font-size:1.3em;
+}
+
+.left-arrow {
+}
+
+.dots {
+  font-size:1.8em;
+  margin-right: .5em;
+  margin-left: .5em;
+
+}
