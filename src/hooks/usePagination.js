@@ -22,20 +22,39 @@ function usePagination({pageNumber}) {
     let prevSib = currentPage - 1;
     let nextSib = currentPage + 1;
     let updatedPageNumbers;
-    // if 
-    if (totalCount < 100) {
-      console.log(currentPaginationData.length, pageSize, totalCount)
-    if (currentPaginationData.length >=  pageSize) {
+    if (totalCount <= pageSize) {
+      updatedPageNumbers = [1];
+      console.log('OK')
+    }
+        // if total blog posts 25 or less...
 
+   else if (totalCount <= 25) {
+      console.log(currentPaginationData.length, pageSize, totalCount)
       updatedPageNumbers = [1, 2];
       console.log(updatedPageNumbers)
-    }
-    else if (currentPaginationData.length <  pageSize) {
-      console.log(currentPaginationData.length, pageSize, totalCount)
-
-      updatedPageNumbers = [1];
-    }
   }
+
+  // if total blog posts less than 50, more than 25...
+  else if (totalCount <= 50 && totalCount > 25) {
+    console.log(currentPaginationData.length, pageSize, totalCount)
+    updatedPageNumbers = [1, 2];
+    console.log(updatedPageNumbers)
+}
+
+  // if total blog posts less than 50, more than 75...
+ else if (totalCount <= 75 && totalCount > 50) {
+    console.log(currentPaginationData.length, pageSize, totalCount)
+    updatedPageNumbers = [1, 2];
+    console.log(updatedPageNumbers)
+}
+
+  // if total blog posts less than 50, more than 75...
+  else if (totalCount <= 100 && totalCount > 75) {
+    console.log(currentPaginationData.length, pageSize, totalCount)
+    updatedPageNumbers = [1, 2];
+    console.log(updatedPageNumbers)
+}
+
     // if there are more than 100 blog posts to display
     else {
     // if on last page
@@ -60,7 +79,7 @@ function usePagination({pageNumber}) {
       updatedPageNumbers = [1, DOTS, prevSib, currentPage, nextSib, DOTS, lastPage];
     }
   }
-  console.log(updatedPageNumbers, 'Ah')
+  console.log(updatedPageNumbers, totalCount)
     setPageNumbers(updatedPageNumbers)
   };
 
