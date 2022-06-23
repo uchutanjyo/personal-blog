@@ -1,26 +1,68 @@
+import React, { useState, useRef, useEffect } from "react";
+import blogs from "../blogposts/blogposts.json";
+import BlogPostPreview from "./BlogPostPreview";
+import useSetBlogPost from "../hooks/useSetBlogPost";
 
-import React from "react";
 
-function BlogPost({ author, title, preview }) {
-  return (
-    <li className="blog">
-      <div className="blogpost">
-        <div className="image-container">
-          {/* <img
-            className="authorImage"
-            src={`https://joeschmoe.io/api/v1/${author}`}
-            alt="Author"
-          /> */}
-          <p variant="body">{author}</p>
-        </div>
 
-        <h2>{title}</h2>
-        <p className="blog-preview">{preview}</p>
-        <button className="go-to-post">Go to post</button>
-      </div>
-    </li>
-  );
+function BlogPost({}) {
+  const {handleClick,currentBlogPost, isSettingBlogPost, currentBlogPostId} = useSetBlogPost({ })
+
+
+  useEffect(() => {
+      
+    console.log(currentBlogPost)
+    console.log(isSettingBlogPost)
+
 }
+     , [isSettingBlogPost])
 
+
+  
+  // const productDetails = currentFiltered.filter((product) => {
+  //   return singleProductId == product.id;
+  // });
+
+
+
+  return (
+    <>
+
+
+      {currentBlogPost.map((blog) => {
+        const {
+          id,
+          title,
+          author,
+          date,
+          fullText,
+          image,
+          tags,
+        } = blog;
+        return (
+          
+          <div className="">
+            <div className="">
+              <h2>{`${title.substring(0, 100)}`.toUpperCase()}</h2>
+              <div className="">
+                {/* <img src={medImageUrl} alt="description" /> */}
+              </div>
+            </div>
+
+            <div className="product-details-right-sidebar">
+            <h2>Author: {author}</h2>
+
+              <h2>Title: {title}</h2>
+
+              <p>{fullText}</p>
+
+              <button >Back to list</button>
+            </div>
+          </div>
+        );
+      })}{" "}
+    </>
+  );
+};
 
 export default BlogPost;

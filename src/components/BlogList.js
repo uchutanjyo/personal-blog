@@ -1,5 +1,5 @@
 import React from "react";
-import BlogPost from "./BlogPost";
+import BlogPostPreview from "./BlogPostPreview";
 import Pagination from "./Pagination";
 import blogs from "../blogposts/blogposts.json";
 import usePagination from "../hooks/usePagination"
@@ -30,8 +30,8 @@ function BlogList({
       <ul>
         {currentPaginationData.map((blog) => {
 return (
-          <BlogPost
-            key={blog.id}
+          <BlogPostPreview
+            id={blog.id}
             author={blog.author}
             title={blog.title}
             preview={blog.preview}

@@ -9,6 +9,7 @@ import { Link, BrowserRouter, Route, Routes } from "react-router-dom";
 import Blog from "./Blog";
 import About from "./About";
 import Contact from "./Contact";
+import BlogPostPage from "./BlogPostPage";
 
 const App = () => {
   return (
@@ -34,6 +35,12 @@ const App = () => {
           <Route path="about/" element={<About />}></Route>
 
           <Route path="contact/" element={<Contact />}></Route>
+          {/* <Route path="contact/" element={<BlogPostPage />}></Route> */}
+
+          <Route
+            path=":blogId/blogpost"
+            element={<BlogPostPage />}
+          ></Route>
         </Routes>
       </BrowserRouter>
     </>

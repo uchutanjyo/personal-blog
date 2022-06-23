@@ -24,41 +24,48 @@ function usePagination({pageNumber}) {
     let updatedPageNumbers;
     if (totalCount <= pageSize) {
       updatedPageNumbers = [1];
-      console.log('OK')
     }
         // if total blog posts 25 or less...
-
    else if (totalCount <= 25) {
-      console.log(currentPaginationData.length, pageSize, totalCount)
       updatedPageNumbers = [1, 2];
-      console.log(updatedPageNumbers)
   }
 
   // if total blog posts less than 50, more than 25...
   else if (totalCount <= 50 && totalCount > 25) {
-    console.log(currentPaginationData.length, pageSize, totalCount)
-    updatedPageNumbers = [1, 2];
-    console.log(updatedPageNumbers)
+    if (lastPage === 2){
+    updatedPageNumbers = [1, lastPage];
+    }
+    else if (lastPage === 4){
+      updatedPageNumbers = [1, 2, 3, lastPage];
+      }
+      else {
+        updatedPageNumbers = [1]
+      }
 }
 
-  // if total blog posts less than 50, more than 75...
+  // if total blog posts more than 50, less than 75...
  else if (totalCount <= 75 && totalCount > 50) {
-    console.log(currentPaginationData.length, pageSize, totalCount)
-    updatedPageNumbers = [1, 2];
-    console.log(updatedPageNumbers)
+  if (lastPage === 5){
+    updatedPageNumbers = [1, 2, 3, lastPage -1, lastPage];
+    }
+    else if (lastPage === 3){
+      updatedPageNumbers = [1, 2, lastPage];
+      }
+       else if (lastPage === 2){
+      updatedPageNumbers = [1, 2];
+      }
+      else {
+        updatedPageNumbers = [1]
+      }
 }
 
-  // if total blog posts less than 50, more than 75...
-  else if (totalCount <= 100 && totalCount > 75) {
-    console.log(currentPaginationData.length, pageSize, totalCount)
-    updatedPageNumbers = [1, 2];
-    console.log(updatedPageNumbers)
-}
-
-    // if there are more than 100 blog posts to display
     else {
+      // if the totalCount is 75 and the lastPage is 2 (50 per page selected)
+      if (lastPage === 2){
+        updatedPageNumbers = [1, 2];
+        }
     // if on last page
-     if (currentPage === lastPage) {
+     else if (currentPage === lastPage) {
       updatedPageNumbers = [1, DOTS, lastPage - 2, lastPage - 1, lastPage];
       setLastPage(currentPage);
     }
