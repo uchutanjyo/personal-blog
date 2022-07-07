@@ -15,8 +15,9 @@ function BlogPostPreview({ author, title, preview, id }) {
   const navigate = useNavigate();
 
   const handleClick = (e) => {
-    console.log(e.target.id)
       setCurrentBlogPostId(e.target.id)
+      console.log(currentBlogPostId)
+
         }
 
         useEffect(() => {

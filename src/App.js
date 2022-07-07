@@ -14,10 +14,11 @@ import { useGlobalContext } from "./context/Context";
 
 const App = () => {
 
-  const {  setCurrentBlogPost } = useGlobalContext();
-  
+  const {  setCurrentBlogPost, setCurrentBlogPostId } = useGlobalContext();
+
   const handleClick = () => {
     setCurrentBlogPost([])
+    setCurrentBlogPostId(null)
   }
 
   return (
