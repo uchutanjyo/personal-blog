@@ -4,7 +4,7 @@ import usePagination, { DOTS } from "../hooks/usePagination";
 import PropTypes from "prop-types";
 import { nanoid } from "nanoid";
 
-function Pagination({
+const Pagination = ({
   onPageSizeOptionChange,
   totalCount,
   pageSizeOptions,
@@ -15,7 +15,7 @@ function Pagination({
   pageSize,
   pageNumbers,
   lastPage
-}) {
+}) => {
 
   return (
     <ul

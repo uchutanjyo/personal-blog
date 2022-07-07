@@ -1,27 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
-import blogs from "../blogposts/blogposts.json";
-import BlogPostPreview from "./BlogPostPreview";
 import { useGlobalContext } from "../context/Context";
 
-
-
-function BlogPost({}) {
-  const { setLoadingToTrue, isLoading, setIsLoading, currentBlogPost, setCurrentBlogPost, isSettingBlogPost, setIsSettingBlogPost, setIsSettingId, isSettingId } = useGlobalContext();
-
-  
-  // const productDetails = currentFiltered.filter((product) => {
-  //   return singleProductId == product.id;
-  // });
-
-  useEffect(() => {
-
-
-        }, [isLoading])
+const BlogPost = () => {
+  const { currentBlogPost } = useGlobalContext();
 
   return (
     <>
-
-
       {currentBlogPost.map((blog) => {
         const {
           id,
@@ -33,7 +17,6 @@ function BlogPost({}) {
           tags,
         } = blog;
         return (
-          
           <div className="">
             <div className="">
               <h2>{`${title.substring(0, 100)}`.toUpperCase()}</h2>

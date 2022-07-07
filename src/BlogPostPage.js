@@ -1,7 +1,7 @@
 import React from "react";
 import BlogPost from "./components/BlogPost";
 
-function BlogPostPage() {
+const BlogPostPage = () => {
   return (
         <BlogPost />
   );

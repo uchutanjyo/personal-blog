@@ -6,11 +6,9 @@ import usePagination from "../hooks/usePagination"
 
 const pageSizes = [15, 25, 50, 100];
 
-function BlogList({
-  onPageSizeOptionChange,
+const BlogList = ({
   totalCount,
-  pageSizeOptions,
-}) {
+}) => {
   const {pageNumbers, lastPage, currentPaginationData, pageSize, updateRowsPerPage, currentPage, onPageChange, onNext, onPrev} = usePagination({ totalCount})
 
   return (

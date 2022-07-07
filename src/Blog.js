@@ -4,7 +4,7 @@ import { useGlobalContext } from "./context/Context";
 
 
 
-function Blog() {
+const Blog = () => {
 
   return (
         <BlogList />
