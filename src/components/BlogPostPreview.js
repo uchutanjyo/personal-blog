@@ -4,22 +4,32 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import blogs from "../blogposts/blogposts.json";
 import { useNavigate } from "react-router-dom";
-import useSetBlogPost from "../hooks/useSetBlogPost";
+import { useGlobalContext } from "../context/Context";
+
 
 
 function BlogPostPreview({ author, title, preview, id }) {
-  // console.log (author,title, id)
+
+  const { setLoadingToTrue, isLoading, setIsLoading, currentBlogPost, setCurrentBlogPost, currentBlogPostId, setCurrentBlogPostId, isSettingBlogPost, setIsSettingBlogPost, setIsSettingId, isSettingId } = useGlobalContext();
 
   const navigate = useNavigate();
 
-  const {handleClick, currentBlogPost, currentBlogPostId, isSettingBlogPost} = useSetBlogPost({ })
+  const handleClick = (e) => {
+    console.log(e.target.id)
+      setCurrentBlogPostId(e.target.id)
+        }
 
-  useEffect(() => {
-    console.log(currentBlogPost.length === 4)
-    if (currentBlogPost.length === 4) {
-      navigate(`/${id}/blogpost`);
-    }
-  }, [isSettingBlogPost]);
+        useEffect(() => {
+          if(currentBlogPost.length === 4 && !isLoading) {
+            console.log(currentBlogPost.length)
+            navigate(`/${currentBlogPost[0].id}/blogpost`);
+          }
+        }, [currentBlogPost]);
+
+
+    
+
+
 
   return (
     <li className="blog" key={id}>
@@ -35,10 +45,11 @@ function BlogPostPreview({ author, title, preview, id }) {
 
         <h2>{title}</h2>
         <p className="blog-preview">{preview}</p>
-        {/* <Link to={`/${id}/blogpost`}> */}
+        
+        {/* <Link to={`/${currentBlogPostId}/blogpost`}> */}
         <button className="go-to-post" id={id} onClick={handleClick}>
           Go to post</button>
-
+          {/* </Link> */}
       </div>
     </li>
   );

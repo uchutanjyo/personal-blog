@@ -58,7 +58,6 @@ function usePagination({pageNumber}) {
         updatedPageNumbers = [1]
       }
 }
-
     else {
       // if the totalCount is 75 and the lastPage is 2 (50 per page selected)
       if (lastPage === 2){

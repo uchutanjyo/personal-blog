@@ -10,14 +10,23 @@ import Blog from "./Blog";
 import About from "./About";
 import Contact from "./Contact";
 import BlogPostPage from "./BlogPostPage";
+import { useGlobalContext } from "./context/Context";
 
 const App = () => {
+
+  const {  setCurrentBlogPost } = useGlobalContext();
+  
+  const handleClick = () => {
+    setCurrentBlogPost([])
+  }
+
   return (
     <>
       <BrowserRouter>
         <div className="Navandtitle">
           <nav className="Nav">
-            <Link to="/" className="Navbar-link">
+            <Link to="/" className="Navbar-link" onClick={handleClick
+}>
               Blog
             </Link>
             <Link to="/About" className="Navbar-link">

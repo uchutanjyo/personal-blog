@@ -1,29 +1,22 @@
 import React, { useState, useRef, useEffect } from "react";
 import blogs from "../blogposts/blogposts.json";
 import BlogPostPreview from "./BlogPostPreview";
-import useSetBlogPost from "../hooks/useSetBlogPost";
+import { useGlobalContext } from "../context/Context";
 
 
 
 function BlogPost({}) {
-  const {handleClick,currentBlogPost, isSettingBlogPost, currentBlogPostId} = useSetBlogPost({ })
-
-
-  useEffect(() => {
-      
-    console.log(currentBlogPost)
-    console.log(isSettingBlogPost)
-
-}
-     , [isSettingBlogPost])
-
+  const { setLoadingToTrue, isLoading, setIsLoading, currentBlogPost, setCurrentBlogPost, isSettingBlogPost, setIsSettingBlogPost, setIsSettingId, isSettingId } = useGlobalContext();
 
   
   // const productDetails = currentFiltered.filter((product) => {
   //   return singleProductId == product.id;
   // });
 
+  useEffect(() => {
 
+
+        }, [isLoading])
 
   return (
     <>
