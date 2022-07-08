@@ -1,10 +1,16 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useGlobalContext } from "../context/Context";
 import { Link } from "react-router-dom";
+import Error from "./Error"
 
 const BlogPost = () => {
   const { currentBlogPost, resetBlogPost } = useGlobalContext();
-
+console.log(currentBlogPost)
+  if (currentBlogPost.length === 0) {
+    return (  
+  <Error></Error>
+)
+  }
   return (
     <>
     <div className="blogpost-container">
@@ -18,6 +24,10 @@ const BlogPost = () => {
           image,
           tags,
         } = blog;
+        if (paragraphs === undefined)
+        return (
+          <Error/>
+        )
         return (
           <div className="blog-post">
             <div className="">
@@ -37,8 +47,7 @@ const BlogPost = () => {
       })
 
               }
- <Link to="/" className="Navbar-link" onClick={resetBlogPost
-}>
+ <Link to="/" className="Navbar-link" onClick={resetBlogPost}>
               <button >Back to list</button></Link>
             </div>
           </div>

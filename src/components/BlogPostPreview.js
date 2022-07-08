@@ -6,6 +6,7 @@ import blogs from "../blogposts/blogposts.json";
 import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../context/Context";
 
+
  const BlogPostPreview = ({ author, title, preview, id }) => {
 
   const { setLoadingToTrue, isLoading, setIsLoading, currentBlogPost, setCurrentBlogPost, currentBlogPostId, setCurrentBlogPostId, isSettingBlogPost, setIsSettingBlogPost, setIsSettingId, isSettingId } = useGlobalContext();
@@ -30,11 +31,11 @@ import { useGlobalContext } from "../context/Context";
           {/* <img
             src={``}
           /> */}
-          <p>{author}</p>
+          <p>By <i>{author}</i></p>
         </div>
 
         <h2>{title}</h2>
-        <p className="blog-preview">{preview}</p>
+        <p className="blog-preview">Preview: {preview}</p>
       
         <button className="go-to-post" id={id} onClick={handleClick}>
           Go to post</button>

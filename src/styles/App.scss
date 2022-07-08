@@ -65,7 +65,7 @@ button {
 // Blogpost preview
 .blog {
   color: rgb(31, 31, 31);
-  background-color: rgba(201, 173, 173, 0.5);
+  background-color: rgba(206, 206, 11, .4);
   padding: 1em;
   margin: 1em;
   list-style-type: none;
@@ -123,7 +123,14 @@ button {
     color: rgb(32, 22, 141);
   }
   button {
-    font-size: 1.5em;
     padding: .2em;
   }
+}
+
+// error
+
+.back {
+  margin-top: 1em;
+  font-size: 1em;
+
 }
