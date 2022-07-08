@@ -14,6 +14,11 @@ const AppProvider = ({ children }) => {
     console.log(isLoading)
   }
 
+  const resetBlogPost = () => {
+    setCurrentBlogPost([])
+    setCurrentBlogPostId(null)
+  }
+
   useEffect(() => {
     if (currentBlogPostId !== null) {
         let filteredPost = blogs.posts.filter((blog) => {
@@ -31,7 +36,8 @@ const AppProvider = ({ children }) => {
           setCurrentBlogPost,
           currentBlogPost,
           setCurrentBlogPostId,
-          setIsLoading
+          setIsLoading,
+          resetBlogPost
         }}
       >
         {children}

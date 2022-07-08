@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap");
 html {
   min-height: 100%;
 }
@@ -20,11 +21,14 @@ body {
           flex-direction: column;
 }
 
+button {
+  cursor: pointer;
+}
+
 .default-button {
   border-radius: 5%;
   color: #060606;
   padding: 1.1em;
-  cursor: pointer;
   font-weight: bold;
 }
 
@@ -69,10 +73,6 @@ body {
   width: 70vw;
 }
 
-.go-to-post {
-  cursor: pointer;
-}
-
 .pagination-wrapper {
   margin-top: 5em;
   display: -webkit-box;
@@ -101,5 +101,52 @@ body {
   font-size: 1.8em;
   margin-right: .5em;
   margin-left: .5em;
+}
+
+.blogpost-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.blog-post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 4em;
+  padding: 2em;
+  max-width: 50%;
+  background-color: #cece0b;
+  font-size: 1.5em;
+  letter-spacing: .1em;
+}
+
+.blog-post h2 {
+  color: #20168d;
+}
+
+.blog-post button {
+  font-size: 1.5em;
+  padding: .2em;
 }
 /*# sourceMappingURL=App.css.map */

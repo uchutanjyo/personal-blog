@@ -14,19 +14,16 @@ import { useGlobalContext } from "./context/Context";
 
 const App = () => {
 
-  const {  setCurrentBlogPost, setCurrentBlogPostId } = useGlobalContext();
+  const {  resetBlogPost, setCurrentBlogPost, setCurrentBlogPostId } = useGlobalContext();
 
-  const handleClick = () => {
-    setCurrentBlogPost([])
-    setCurrentBlogPostId(null)
-  }
+ 
 
   return (
     <>
       <BrowserRouter>
         <div className="Navandtitle">
           <nav className="Nav">
-            <Link to="/" className="Navbar-link" onClick={handleClick
+            <Link to="/" className="Navbar-link" onClick={resetBlogPost
 }>
               Blog
             </Link>

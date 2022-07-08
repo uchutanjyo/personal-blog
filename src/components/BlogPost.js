@@ -1,23 +1,25 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useGlobalContext } from "../context/Context";
+import { Link } from "react-router-dom";
 
 const BlogPost = () => {
-  const { currentBlogPost } = useGlobalContext();
+  const { currentBlogPost, resetBlogPost } = useGlobalContext();
 
   return (
     <>
+    <div className="blogpost-container">
       {currentBlogPost.map((blog) => {
         const {
           id,
           title,
           author,
           date,
-          fullText,
+          paragraphs,
           image,
           tags,
         } = blog;
         return (
-          <div className="">
+          <div className="blog-post">
             <div className="">
               <h2>{`${title.substring(0, 100)}`.toUpperCase()}</h2>
               <div className="">
@@ -26,17 +28,23 @@ const BlogPost = () => {
             </div>
 
             <div className="product-details-right-sidebar">
-            <h2>Author: {author}</h2>
+            <h3>Author: {author}</h3>
 
-              <h2>Title: {title}</h2>
+            <h3> Title: {title}</h3>
 
-              <p>{fullText}</p>
+              {paragraphs.map((paragraph) => {
+                return  <p key={id}>{paragraph}</p>
+      })
 
-              <button >Back to list</button>
+              }
+ <Link to="/" className="Navbar-link" onClick={resetBlogPost
+}>
+              <button >Back to list</button></Link>
             </div>
           </div>
         );
-      })}{" "}
+      })}
+      </div>
     </>
   );
 };

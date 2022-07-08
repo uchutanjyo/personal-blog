@@ -1,4 +1,4 @@
-// @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap");
 
 @mixin flexCenter($direction) {
   display: flex;
@@ -17,12 +17,15 @@ body {
   @include flexCenter(column);
 }
 
+button {
+  cursor: pointer
+}
+
 // buttons
 .default-button {
   border-radius: 5%;
   color: rgb(6, 6, 6);
   padding: 1.1em;
-  cursor: pointer;
   font-weight: bold;
 }
 
@@ -59,7 +62,7 @@ body {
   margin-right: 2em;
 }
 
-// Blogpost
+// Blogpost preview
 .blog {
   color: rgb(31, 31, 31);
   background-color: rgba(201, 173, 173, 0.5);
@@ -70,7 +73,6 @@ body {
 } 
 
 .go-to-post {
-  cursor: pointer
 }
 
 // Pagination
@@ -81,6 +83,7 @@ body {
   list-style-type: none;
   button {
     font-size:1.5em;
+    
   }
 }
 
@@ -100,4 +103,27 @@ body {
   margin-right: .5em;
   margin-left: .5em;
 
+}
+
+// Blog post page
+.blogpost-container {
+  @include flexCenter(column);
+
+}
+
+.blog-post {
+  @include flexCenter(column);
+  margin-top: 4em;
+  padding: 2em;
+  max-width: 50%;
+  background-color: rgb(206, 206, 11);
+  font-size: 1.5em;
+  letter-spacing: .1em;
+  h2 {
+    color: rgb(32, 22, 141);
+  }
+  button {
+    font-size: 1.5em;
+    padding: .2em;
+  }
 }
