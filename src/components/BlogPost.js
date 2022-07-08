@@ -5,7 +5,6 @@ import Error from "./Error"
 
 const BlogPost = () => {
   const { currentBlogPost, resetBlogPost } = useGlobalContext();
-console.log(currentBlogPost)
   if (currentBlogPost.length === 0) {
     return (  
   <Error></Error>

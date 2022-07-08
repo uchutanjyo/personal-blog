@@ -1,12 +1,9 @@
-// import "../css/pagination.scss";
 import React, {useEffect} from "react";
 import usePagination, { DOTS } from "../hooks/usePagination";
 import PropTypes from "prop-types";
-import { nanoid } from "nanoid";
 
 const Pagination = ({
   onPageSizeOptionChange,
-  totalCount,
   pageSizeOptions,
   onPageChange,
   onNext,
@@ -28,22 +25,20 @@ const Pagination = ({
           onClick={onPrev}
           disabled={currentPage === 1 ? true : false} 
         >
-          left
+          L
         </button>
       </li>
       {pageNumbers.map((pageNumber) => {
-        const key = nanoid();
 
         if (pageNumber === DOTS) {
           return (
-            <li key={key} className="dots">
+            <li  className="dots">
 ...            </li>
           );
         }
-
+        
         return (
           <li
-            key={key}
             className="pagination-number"
             aria-current={currentPage === pageNumber ? 'page' : false} 
           >
@@ -64,7 +59,7 @@ const Pagination = ({
           onClick={onNext}
           disabled={currentPage === lastPage ? true : false} 
         >
-          right
+          R
         </button>
       </li>
 

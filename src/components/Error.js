@@ -10,8 +10,8 @@ const Error = () => {
     <div className="blogpost-container">
     <div className="blog-post">
       <h3>Error! Error! Error!</h3> 
-      <p>You either refreshed where localStorage doesn't yet exist, or</p>
-      <p>this blog post hasn't been created yet.</p>
+      <p>You either refreshed where localStorage doesn't yet exist, or...</p>
+      <p>...this blog post hasn't been created yet.</p>
 
       <p>Please return to the homepage. Thanks.</p>
       <Link to="/" onClick={resetBlogPost

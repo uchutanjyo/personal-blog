@@ -85,7 +85,6 @@ function usePagination({pageNumber}) {
       updatedPageNumbers = [1, DOTS, prevSib, currentPage, nextSib, DOTS, lastPage];
     }
   }
-  console.log(updatedPageNumbers, totalCount)
     setPageNumbers(updatedPageNumbers)
   };
 

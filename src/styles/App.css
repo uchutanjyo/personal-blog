@@ -23,6 +23,13 @@ body {
 
 button {
   cursor: pointer;
+  border: 1px dotted;
+  background-color: #010101;
+  color: whitesmoke;
+}
+
+button:hover {
+  opacity: 50%;
 }
 
 .default-button {
@@ -62,6 +69,71 @@ button {
 
 .Navbar-link {
   margin-right: 2em;
+}
+
+.top-header-wrapper {
+  margin-top: 5em;
+  padding: 1em;
+  background-image: url("../../public/code.png");
+  background-size: contain;
+  background-repeat: initial;
+}
+
+.top-header-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 2em;
+  background-color: azure;
+  font-size: 10em;
+  letter-spacing: .7em;
+  padding: .4em;
+}
+
+.top-header-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  letter-spacing: .2em;
+}
+
+.top-header-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  letter-spacing: .2em;
+  font-size: .2em;
+  letter-spacing: .1em;
 }
 
 .blog {
@@ -136,7 +208,7 @@ button {
   margin-top: 4em;
   padding: 2em;
   max-width: 50%;
-  background-color: #cece0b;
+  background-color: rgba(206, 206, 11, 0.7);
   font-size: 1.5em;
   letter-spacing: .1em;
 }

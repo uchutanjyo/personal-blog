@@ -1,8 +1,6 @@
 
 import React, {useState} from "react";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
-import blogs from "../blogposts/blogposts.json";
 import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../context/Context";
 
@@ -19,7 +17,6 @@ import { useGlobalContext } from "../context/Context";
 
         useEffect(() => {
           if(currentBlogPost.length === 1 && !isLoading) {
-            console.log(currentBlogPost.length)
             navigate(`/${currentBlogPost[0].id}/blogpost`);
           }
         }, [currentBlogPost]);
