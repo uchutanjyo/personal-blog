@@ -53,8 +53,24 @@
       "date": "1630299425000",
       "image": "http://dummyimage.com/200x134.png/5fa2dd/ffffff",
       "readingTimeMinutes": 12,
-      "paragraphs":[["And then, in an example axios request: "],
-      [" const data = await axios.get(`${appUrl}/cart`);"]],
+      "paragraphs": [["Just a quick note to self (and anyone else who struggles with setting up their dev environment in any capacity): when it comes to getting stuck, persistence really is what is required to move forward in most cases!"],
+
+      ["I suddenly realized that changing my MySQL password would be necessary before deploying/hosting my first full-stack application, as the password is general-use for me - and also somewhat stupidly stored in the config file for my Express server. OK, maybe this isn't as important as I think it is, but I didn't have a good feeling about leaving it there."],
+      
+      
+      ["Anyways, after going through several articles and trying several suggestions on how to accomplish this, I landed on this article: https://www.mysqltutorial.org/mysql-changing-password.aspx"],
+      
+      ["It took until the bottom solution for me to find the one that worked for me (i.e. my version of MySQL, Ubuntu etc.). Thank you to the authors!"],
+      
+      ["This is what worked, once logged into MySQL via the terminal:"],
+      
+      ["ALTER USER dbadmin@localhost IDENTIFIED BY 'littlewhale'"],
+      
+      ["So yes, this is basically a reminder to myself and all the other basically still-beginners out there: just keep pushing when something's not working - eventually, you will get it. Try not to get frustrated as it's a waste of energy. :)"],
+      
+      ["That's it! More coming soon."]
+    ],
+        
       "tags": ["food", "health"]
     },
     {

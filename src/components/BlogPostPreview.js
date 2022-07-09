@@ -32,7 +32,7 @@ import { useGlobalContext } from "../context/Context";
         </div>
 
         <h2>{title}</h2>
-        <p className="blog-preview">Preview: {preview}</p>
+        <p className="blog-preview">Preview: {preview}...</p>
       
         <button className="go-to-post" id={id} onClick={handleClick}>
           Go to post</button>
