@@ -285,9 +285,14 @@ button:hover {
   .top-header-wrapper {
     margin-top: 6em;
     margin-left: 3em;
+    height: 14em;
   }
   .top-header-1 {
     font-size: 3em;
+    height: 95%;
+  }
+  .top-header-3 {
+    font-size: .4em;
   }
   .blog {
     margin: 0em;
@@ -296,6 +301,7 @@ button:hover {
     margin-right: 2em;
     margin-left: -.5em;
     padding: .5em;
+    margin-top: 1em;
   }
   .blog-post {
     font-size: 1.5em;
