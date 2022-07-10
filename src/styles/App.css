@@ -268,7 +268,7 @@ button:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 3em;
+    width: 1em;
     height: 2.5em;
     background-color: #040a23;
     margin-top: 0em;
@@ -278,34 +278,61 @@ button:hover {
   .Nav a {
     text-decoration: none;
     color: #dadada;
-    font-size: 2em;
+    font-size: 1.2em;
     margin: 1em;
     border-right: 1px dotted #ffd5d5;
   }
+  .wrapper {
+    max-width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-right: -1em;
+  }
   .top-header-wrapper {
+    width: 85%;
     margin-top: 6em;
-    margin-left: 3em;
-    height: 14em;
+    margin-left: -1em;
+    height: 10em;
   }
   .top-header-1 {
-    font-size: 3em;
+    font-size: 2em;
     height: 95%;
   }
   .top-header-3 {
     font-size: .4em;
   }
+  .pagination-wrapper {
+    width: 50%;
+    margin-left: -6em;
+  }
+  .pagination-wrapper button {
+    font-size: 1.1em;
+  }
+  .pagination-selection {
+    width: 1em;
+    margin-right: -1em;
+  }
   .blog {
     margin: 0em;
     list-style-type: none;
-    width: 90vw;
-    margin-right: 2em;
-    margin-left: -.5em;
-    padding: .5em;
+    width: 100%;
     margin-top: 1em;
+    margin-left: -2.8em;
   }
   .blog-post {
-    font-size: 1.5em;
-    max-width: 80%;
+    font-size: 1em;
+    max-width: 85vw;
   }
   .section {
     display: -webkit-box;

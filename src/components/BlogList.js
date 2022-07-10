@@ -12,7 +12,7 @@ const BlogList = ({
   const {pageNumbers, lastPage, currentPaginationData, pageSize, updateRowsPerPage, currentPage, onPageChange, onNext, onPrev} = usePagination({ totalCount})
 
   return (
-    <div>
+    <>
       <Pagination
         currentPage={currentPage}
         totalCount={blogs.posts.length}
@@ -39,7 +39,7 @@ return (
 )}
         )} 
       </ul>
-    </div>
+      </>
   );
 }
 
