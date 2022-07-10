@@ -181,9 +181,8 @@ letter-spacing: .1em;
   .Nav {
       top: 0;
       min-width: 100vw;
-      max-width: 100vw;
-      min-height: 10vh;
-      max-height: 8vh;
+      width: 94vw;
+      min-height: 4vh;
   }
 
   .Nav-links {
@@ -195,7 +194,7 @@ letter-spacing: .1em;
   .nav-item {
       @include flexCenter(column);
       width: 3em;
-      height: 4em;
+      height: 2.5em;
       background-color: #040a23;
       margin-top: 0em;
       padding: .4em;
@@ -205,13 +204,14 @@ letter-spacing: .1em;
   .Nav a {
       text-decoration: none;
       color: rgb(218, 218, 218);
-      font-size: 1em;
+      font-size: 2em;
       margin: 1em;
       border-right: 1px dotted rgb(255, 213, 213);
   }
 
   .top-header-wrapper {
     margin-top: 6em;
+    margin-left: 3em;
   }
 
   .top-header-1 {
@@ -221,6 +221,16 @@ letter-spacing: .1em;
   .blogpost-container {
   }
   
+  .blog {
+    margin: 0em;
+    list-style-type: none;
+    width: 90vw;
+    margin-right: 2em;
+    margin-left: -.5em;
+    padding: .5em;
+  
+  }
+
   .blog-post {
     font-size: 1.5em;
     max-width: 80%;

@@ -244,9 +244,8 @@ button:hover {
   .Nav {
     top: 0;
     min-width: 100vw;
-    max-width: 100vw;
-    min-height: 10vh;
-    max-height: 8vh;
+    width: 94vw;
+    min-height: 4vh;
   }
   .Nav-links {
     -webkit-box-orient: horizontal;
@@ -270,7 +269,7 @@ button:hover {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 3em;
-    height: 4em;
+    height: 2.5em;
     background-color: #040a23;
     margin-top: 0em;
     padding: .4em;
@@ -279,15 +278,24 @@ button:hover {
   .Nav a {
     text-decoration: none;
     color: #dadada;
-    font-size: 1em;
+    font-size: 2em;
     margin: 1em;
     border-right: 1px dotted #ffd5d5;
   }
   .top-header-wrapper {
     margin-top: 6em;
+    margin-left: 3em;
   }
   .top-header-1 {
     font-size: 3em;
+  }
+  .blog {
+    margin: 0em;
+    list-style-type: none;
+    width: 90vw;
+    margin-right: 2em;
+    margin-left: -.5em;
+    padding: .5em;
   }
   .blog-post {
     font-size: 1.5em;
