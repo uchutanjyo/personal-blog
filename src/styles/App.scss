@@ -9,12 +9,14 @@
 
 html {
   min-height: 100%;
+      overflow-x: hidden;
 }
 
 body {
   background-color: whitesmoke;
   font-family: "Roboto Condensed", sans-serif;
   @include flexCenter(column);
+  overflow-x: hidden;
 }
 
 button {
@@ -123,8 +125,10 @@ letter-spacing: .1em;
   display: flex;
   flex-direction: row;
   list-style-type: none;
+  max-width: 1em;
+
   button {
-    font-size:1.5em;
+    font-size:1em;
     
   }
 }
@@ -210,7 +214,7 @@ letter-spacing: .1em;
   }
 
   .wrapper {
-    max-width: 100vw;
+    max-width: 90vw;
     @include flexCenter(column);
     margin-right: -1em
   }
@@ -236,16 +240,21 @@ letter-spacing: .1em;
   
   .pagination-wrapper {
   width: 50%;
-  margin-left: -6em;
+  margin-left: -15em;
   button {
     font-size:1.1em;
     
   }
   }
   .pagination-selection {
-width: 1em;
-margin-right: -1em;
+width: 3em;
+margin-right: -2em;
+font-size: 1em;
 
+  }
+
+  .pagination-number {
+    margin-right: .1em;
   }
 
   .blog {
