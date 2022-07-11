@@ -124,6 +124,8 @@ letter-spacing: .1em;
   margin-top: 5em;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   list-style-type: none;
   max-width: 1em;
 
@@ -240,15 +242,14 @@ letter-spacing: .1em;
   
   .pagination-wrapper {
   width: 50%;
-  margin-left: -17em;
   button {
     font-size:1.1em;
+    width: 90%
     
   }
   }
   .pagination-selection {
 width: 3em;
-margin-right: -2em;
 font-size: 1em;
 
   }

@@ -170,6 +170,12 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   list-style-type: none;
   max-width: 1em;
 }
@@ -317,14 +323,13 @@ button:hover {
   }
   .pagination-wrapper {
     width: 50%;
-    margin-left: -17em;
   }
   .pagination-wrapper button {
     font-size: 1.1em;
+    width: 90%;
   }
   .pagination-selection {
     width: 3em;
-    margin-right: -2em;
     font-size: 1em;
   }
   .pagination-number {
