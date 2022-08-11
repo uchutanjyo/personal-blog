@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useGlobalContext } from "../context/Context";
 import { Link } from "react-router-dom";
 import Error from "./Error"
+import conditonalax1  from "../blogimages/conditionalax-1.png"
 
 const BlogPost = () => {
   const { currentBlogPost, resetBlogPost } = useGlobalContext();
@@ -42,7 +43,12 @@ const BlogPost = () => {
             <h3> Title: {title}</h3>
 
               {paragraphs.map((paragraph) => {
-                return  <p key={id}>{paragraph}</p>
+                if (paragraph[0].includes('.png')) {
+                  const screenshot = `${paragraph[0]}`
+                  console.log(screenshot)
+                  return <img src={require(`../blogimages/${screenshot}`)}  style={{height:'5em',}} />
+                }
+                return  <p key={id} style={{display:'flex', paddingTop:'.7em', lineHeight: '1.3em'}}>{paragraph}</p>
       })
 
               }
