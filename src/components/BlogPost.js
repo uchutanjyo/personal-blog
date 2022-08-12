@@ -46,7 +46,7 @@ const BlogPost = () => {
                 if (paragraph[0].includes('.png')) {
                   const screenshot = `${paragraph[0]}`
                   console.log(screenshot)
-                  return <img src={require(`../blogimages/${screenshot}`)}  style={{height:'5em',}} />
+                  return <img src={require(`../blogimages/${screenshot}`)}  style={{height:'auto',}} />
                 }
 
                 return  <p key={id} style={{display:'flex', paddingTop:'.7em', lineHeight: '1.3em'}}>{paragraph}</p>

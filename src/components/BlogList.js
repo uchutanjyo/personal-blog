@@ -31,6 +31,7 @@ return (
           <BlogPostPreview
           key={blog.id}
             id={blog.id}
+            date={blog.date}
             author={blog.author}
             title={blog.title}
             preview={blog.preview}

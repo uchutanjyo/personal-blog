@@ -20,7 +20,6 @@ import { useGlobalContext } from "../context/Context";
             navigate(`/${currentBlogPost[0].id}/blogpost`);
           }
         }, [currentBlogPost]);
-
   return (
     
     <li className={!title.includes('Placeholder') ? "blog" :"placeholder"} key={id}>

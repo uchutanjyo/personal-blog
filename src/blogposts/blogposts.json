@@ -50,11 +50,30 @@
       "id": 2,
       "author": "Matt Engerer",
       "title": "A Note to Self on Persistence - MySQL",
-      "preview": "ust a quick note to self (and anyone else who struggles with setting up their dev environment in any capacity",
-      "date": "1630299425000",
+      "preview": "Just a quick note to self (and anyone else who struggles with setting up their dev environment in any capacity",
+      "date": "May 6, 2022",
       "image": "",
       "readingTimeMinutes": 12,
-      "paragraphs": []
+      "paragraphs": [
+        ["Just a quick note to self (and anyone else who struggles with setting up their dev environment in any capacity): when it comes to getting stuck, persistence really is what is required to move forward in most cases!"],
+
+        ["I suddenly realized that changing my MySQL password would be necessary before deploying/hosting my first full-stack application, as the password is general-use for me - and also somewhat stupidly stored in the config file for my Express server. OK, maybe this isn't as important as I think it is, but I didn't have a good feeling about leaving it there."],
+        
+        
+        ["Anyways, after going through several articles and trying several suggestions on how to accomplish this, I landed on this article: https://www.mysqltutorial.org/mysql-changing-password.aspx"],
+        
+        ["It took until the bottom solution for me to find the one that worked for me (i.e. my version of MySQL, Ubuntu etc.). Thank you to the authors!"],
+        
+        ["This is what worked, once logged into MySQL via the terminal:"],
+        
+        ["ALTER USER dbadmin@localhost IDENTIFIED BY 'littlewhale'"],
+        
+        ["So yes, this is basically a reminder to myself and all the other basically still-beginners out there: just keep pushing when something's not working - eventually, you will get it. Try not to get frustrated as it's a waste of energy. :)"],
+        
+        ["That's it! More coming soon."]
+        
+          
+      ]
     },
     {
       "id": 4,
@@ -88,13 +107,44 @@
     {
       "id": 5,
       "author": "Matt Engerer",
-      "title": "Placeholder to display pagination",
-      "preview": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue.",
-      "date": "1641217936000",
+      "title": "Successful Immediate-Updating of Cart Item Quantity in State, Rendering on Cart Page (React Router, Express)",
+      "preview": " just managed to get something work which seems to be a very common issue among React beginners..",
+      "date": "May 3, 2022",
       "image": "",
       "readingTimeMinutes": 15,
-      "paragraphs": [["And then, in an example axios request: "],
-      [" const data = await axios.get(`${appUrl}/cart`);"]],
+      "paragraphs": [
+        ["I just managed to get something work which seems to be a very common issue among React beginners."],
+
+        ["I had been trying to update the shopping cart qty immediately after adding an item to the cart/redirecting to cart page in my React Router/Express/MySQL fake e-commerce store project. After a couple hours of struggling, here is how I did it (brief explanation):"],
+
+        ["DISCLAIMER: my code indentation is horrible - it’s something I plan to fix before any ‘final’ versions of any app I create are ‘released’."],
+
+
+        ["-handleSubmit function which updates cartItems in MySQL database also sets redirect state to true (it is false by default)"],
+
+        ["-useEffect in context.js file listens for a change in redirect state (redirect is a global variable)"],
+
+        ["-if redirect changes, getCart() is called. getCart() is the function which is called in order to retrieve the current cart from the database to be used on the Cart page. I had already implemented this, but simply directing useEffect to watch for a change in another state variable allowed getCart() to re-trigger and thus update the the cart state immediately and indirectly (this did NOT work inside of the handleSubmit function)."],
+
+        ["Here’s the code:"],
+
+        ["In Context.js:"],
+
+        ["successful-im1.png"],
+
+        ["In ProductDetails.js (detailed product info page with ‘add to cart’ button which called handleSubmit on click)."],
+
+        ["successful-im2.png"],
+
+        ["I realize this is not a detailed explanation whatsoever and will be of little use to most developers seeking help. For the time being, this blog is to document my own issues - for my own reference and as proof of my problem solving abilities! There, I said it! "],
+
+        ["But, it would of course be great if these barebones solutions do end up helping someone out."],
+
+        ["That’s it for the moment."],
+
+
+        ["Matt"]
+      ],
       "tags": ["hardware", "politics"]
     },
     {
