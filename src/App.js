@@ -1,10 +1,10 @@
-import React from "react";
+import React, {useEffect} from "react";
 import ReactDOM from "react-dom";
 import "./styles/App.css";
 
 
 // react routerd
-import { Link, BrowserRouter, Route, Routes } from "react-router-dom";
+import { Link, BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 // pages
 import Blog from "./Blog";
 import About from "./About";
@@ -12,11 +12,11 @@ import Contact from "./Contact";
 import BlogPostPage from "./BlogPostPage";
 import { useGlobalContext } from "./context/Context";
 
-const App = () => {
+const App = (children) => {
 
   const {  resetBlogPost, setCurrentBlogPost, setCurrentBlogPostId } = useGlobalContext();
 
- 
+
 
   return (
     <>
@@ -36,11 +36,13 @@ const App = () => {
             </Link>
           </nav>
         </div>
-       
+     
+
         <Routes>
           <Route path="/" element={<Blog />}></Route>
+         
           <Route path="about/" element={<About />}></Route>
-
+         
           <Route path="contact/" element={<Contact />}></Route>
           {/* <Route path="contact/" element={<BlogPostPage />}></Route> */}
 
@@ -49,6 +51,8 @@ const App = () => {
             element={<BlogPostPage />}
           ></Route>
         </Routes>
+                
+
       </BrowserRouter>
     </>
   );
