@@ -78,8 +78,8 @@
     {
       "id": 4,
       "author": "Matt Engerer",
-      "title": "Basic Text Markup/Styling & Conditional Rendering of Images from Local JSON File",
-      "preview": "Proin at turpis a pede posuere nonummy. Integer non velit.",
+      "title": "*NEW* Basic Text Markup/Styling & Conditional Rendering of Images from Local JSON File",
+      "preview": "I let this blog sit inactive for a couple months. While my reasons for this are unsatisfying...",
       "date": "August 11, 2022",
       "image": "http://dummyimage.com/200x134.png/5fa2dd/ffffff",
       "readingTimeMinutes": 13,
@@ -135,6 +135,7 @@
         ["In ProductDetails.js (detailed product info page with ‘add to cart’ button which called handleSubmit on click)."],
 
         ["successful-im2.png"],
+        ["//this screenshot will definitely be fixed soon..."],
 
         ["I realize this is not a detailed explanation whatsoever and will be of little use to most developers seeking help. For the time being, this blog is to document my own issues - for my own reference and as proof of my problem solving abilities! There, I said it! "],
 

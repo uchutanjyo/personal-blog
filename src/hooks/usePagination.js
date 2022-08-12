@@ -3,10 +3,9 @@ import blogs from "../blogposts/blogposts.json";
 
 export const DOTS = "...";
 
-
 function usePagination({pageNumber}) {
   const totalCount = blogs.posts.length;
-  const defaultPaginationData = blogs.posts.slice(0, 15)
+  const defaultPaginationData = (blogs.posts.slice(0, 15))
   const defaultPageSize = 15;
   const defaultLastPage = Math.ceil(totalCount / defaultPageSize)
 
@@ -103,6 +102,8 @@ function usePagination({pageNumber}) {
     setCurrentPage(currentPage - 1);
   };
 
+
+
   // when currentPage state changes, set currentPaginationData to the following data sliced from blog.posts array
   useEffect(() => {
     let indexStart = (currentPage - 1) * pageSize;
@@ -148,6 +149,7 @@ function usePagination({pageNumber}) {
   useEffect(() => {
     changePageNumbers();
   }, [lastPage]);
+
 
   return {
     pageNumbers,

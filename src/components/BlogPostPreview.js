@@ -20,10 +20,11 @@ import { useGlobalContext } from "../context/Context";
             navigate(`/${currentBlogPost[0].id}/blogpost`);
           }
         }, [currentBlogPost]);
+        
   return (
     
     <li className={!title.includes('Placeholder') ? "blog" :"placeholder"} key={id}>
-      <div className="blogpost">
+      <div >
         <div className="image-container">
           {/* <img
             src={``}
@@ -31,7 +32,7 @@ import { useGlobalContext } from "../context/Context";
           <p>By <i>{author}</i></p>
         </div>
 
-        <h2>{title}</h2>
+        <h2 className={!title.includes('*NEW*') ? "" :"new"}>{title}</h2>
         <h3>Date: {date}</h3>
         <p className="blog-preview">Preview: {preview}...</p>
       

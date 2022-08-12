@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BlogPostPreview from "./BlogPostPreview";
 import Pagination from "./Pagination";
 import blogs from "../blogposts/blogposts.json";
@@ -10,6 +10,11 @@ const BlogList = ({
   totalCount,
 }) => {
   const {pageNumbers, lastPage, currentPaginationData, pageSize, updateRowsPerPage, currentPage, onPageChange, onNext, onPrev} = usePagination({ totalCount})
+
+  const sortByDate = (array) => array.sort((a, b) => new Date(b.date) -  new Date(a.date));
+
+
+
 
   return (
     <>
@@ -26,7 +31,7 @@ const BlogList = ({
         lastPage={lastPage}
       />
       <ul>
-        {currentPaginationData.map((blog) => {
+        {sortByDate(currentPaginationData).map((blog) => {
 return (
           <BlogPostPreview
           key={blog.id}
@@ -36,6 +41,7 @@ return (
             title={blog.title}
             preview={blog.preview}
             featureImage={blog.image}
+          
           />
 )}
         )} 
