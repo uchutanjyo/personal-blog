@@ -13,7 +13,6 @@
       "readingTimeMinutes": 9,
       "paragraphs": [["Wow, that was a long post-title- which probably doesn't properly explain what I did, but it made sense in my head. It's been a long time since I wrote anything here"], 
 
-      ["conditionalax-1.png"],
       
       ["I found it very difficult to find clear instructions on this (for people at my level, anyway..), so hopefully this helps someone. Please excuse any bad grammar / lack of capitalization/punctuation -I'm writing this fast so I can get back to my work!"],
 
@@ -27,7 +26,7 @@
 
 ["Eventually, I found a recommendation to change the process.env.NODE_ENV to either development or production in order to conditionally change the url I wanted to send requests to. Like so:."],
 
-["const appUrl = process.env.NODE_ENV === 'development' ?  'http://localhost:4000' : '[hosted app url' "],
+["conditionalax-1.png"],
 
 
  ["And then, in an example axios request: "],
