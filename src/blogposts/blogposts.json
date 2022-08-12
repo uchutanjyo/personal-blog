@@ -2,8 +2,7 @@
   "tags": [
 
   ],
-  "posts": [
-    {
+  "posts": [{
       "id": 1,
       "author": "Matt Engerer",
       "title": "Conditional Axios-Request/Response URL based on whether server running locally or remotely - React, Express.js, process.env.NODE_ENV",
@@ -11,39 +10,39 @@
       "date": "June 2, 2022",
       "image": "",
       "readingTimeMinutes": 9,
-      "paragraphs": [["Wow, that was a long post-title- which probably doesn't properly explain what I did, but it made sense in my head. It's been a long time since I wrote anything here"], 
-
-      
-      ["I found it very difficult to find clear instructions on this (for people at my level, anyway..), so hopefully this helps someone. Please excuse any bad grammar / lack of capitalization/punctuation -I'm writing this fast so I can get back to my work!"],
-
-      ["Basically, I have a React front end which talks to an Express/MySQL backend. Via axios requests/responses, I wanted to know how to conditionally connect React to either: "],
-
-["-my locally running server (command 'heroku local') when writing code/debugging, so I could have full and easy access to the server's console (rather than pushing to heroku git every time I wanted to observe server changes)."],
-
-["-the hosted Heroku server after pushing changes."],
-
-["I already knew how to do this by hard-coding axios requests to either the server running on localhost OR the actual hosted app. Of course, hardcoding the changes for every single request is NOT practical at all. Without instruction, I set off down yet another rabbit hole, searching for the answer to this question."],
-
-["Eventually, I found a recommendation to change the process.env.NODE_ENV to either development or production in order to conditionally change the url I wanted to send requests to. Like so:."],
-
-["conditionalax-1.png"],
+      "paragraphs": [
+        ["Wow, that was a long post-title- which probably doesn't properly explain what I did, but it made sense in my head. It's been a long time since I wrote anything here"],
 
 
- ["And then, in an example axios request: "],
-       ["conditionalax-2.png"],
+        ["I found it very difficult to find clear instructions on this (for people at my level, anyway..), so hopefully this helps someone. Please excuse any bad grammar / lack of capitalization/punctuation -I'm writing this fast so I can get back to my work!"],
 
- ["This would ensure that the request would be made to localhost if the node environment variable was set to 'development'. Anything else would make a request to my hosted server."],
+        ["Basically, I have a React front end which talks to an Express/MySQL backend. Via axios requests/responses, I wanted to know how to conditionally connect React to either: "],
+
+        ["-my locally running server (command 'heroku local') when writing code/debugging, so I could have full and easy access to the server's console (rather than pushing to heroku git every time I wanted to observe server changes)."],
+
+        ["-the hosted Heroku server after pushing changes."],
+
+        ["I already knew how to do this by hard-coding axios requests to either the server running on localhost OR the actual hosted app. Of course, hardcoding the changes for every single request is NOT practical at all. Without instruction, I set off down yet another rabbit hole, searching for the answer to this question."],
+
+        ["Eventually, I found a recommendation to change the process.env.NODE_ENV to either development or production in order to conditionally change the url I wanted to send requests to. Like so:."],
+
+        ["conditionalax-1.png"],
+
+        ["And then, in an example axios request: "],
+        ["conditionalax-2.png"],
+
+        ["This would ensure that the request would be made to localhost if the node environment variable was set to 'development'. Anything else would make a request to my hosted server."],
 
 
- ["However, I struggled for a while to  figure out HOW to change NODE_ENV depending on my needs. Without going deep into it (because I'm unable to, basically..), it turns out that it can't be modified directly, and in fact, when running a React app in 'build' mode (for me, the command is 'npm run build') the NODE_ENV is automatically set to 'production'. When running in development mode ('npm start'), the NODE_ENV is 'development'. "],
+        ["However, I struggled for a while to  figure out HOW to change NODE_ENV depending on my needs. Without going deep into it (because I'm unable to, basically..), it turns out that it can't be modified directly, and in fact, when running a React app in 'build' mode (for me, the command is 'npm run build') the NODE_ENV is automatically set to 'production'. When running in development mode ('npm start'), the NODE_ENV is 'development'. "],
 
- ["So, everything was actually already in place. The problem was, I was trying to test this while only connecting to my localhost express server (waiting for recent console.logs to not be logged in my server console - however, they were always logged, because I was always running the local version of my front-end app, no matter what I tried to do to change the NODE_ENV directly). I only figured it out when I pushed my React changes to github (which included a console log of process.env.NODE_ENV) and ran my hosted full-stack app (netlify and Heroku). It was there that I noticed NODE_ENV was automatically being set to 'production'. Everything made sense, then! "],
+        ["So, everything was actually already in place. The problem was, I was trying to test this while only connecting to my localhost express server (waiting for recent console.logs to not be logged in my server console - however, they were always logged, because I was always running the local version of my front-end app, no matter what I tried to do to change the NODE_ENV directly). I only figured it out when I pushed my React changes to github (which included a console log of process.env.NODE_ENV) and ran my hosted full-stack app (netlify and Heroku). It was there that I noticed NODE_ENV was automatically being set to 'production'. Everything made sense, then! "],
 
- ["I hope this helps out anyone who stumbles upon this who is stuck like I was - creating this developer-production environment with React and Express was actually quite a bit simpler than I'd originally thought."]
-  
-    ],
+        ["I hope this helps out anyone who stumbles upon this who is stuck like I was - creating this developer-production environment with React and Express was actually quite a bit simpler than I'd originally thought."]
 
-  
+      ],
+
+
       "tags": []
     },
     {
@@ -58,21 +57,21 @@
         ["Just a quick note to self (and anyone else who struggles with setting up their dev environment in any capacity): when it comes to getting stuck, persistence really is what is required to move forward in most cases!"],
 
         ["I suddenly realized that changing my MySQL password would be necessary before deploying/hosting my first full-stack application, as the password is general-use for me - and also somewhat stupidly stored in the config file for my Express server. OK, maybe this isn't as important as I think it is, but I didn't have a good feeling about leaving it there."],
-        
-        
+
+
         ["Anyways, after going through several articles and trying several suggestions on how to accomplish this, I landed on this article: https://www.mysqltutorial.org/mysql-changing-password.aspx"],
-        
+
         ["It took until the bottom solution for me to find the one that worked for me (i.e. my version of MySQL, Ubuntu etc.). Thank you to the authors!"],
-        
+
         ["This is what worked, once logged into MySQL via the terminal:"],
-        
+
         ["ALTER USER dbadmin@localhost IDENTIFIED BY 'littlewhale'"],
-        
+
         ["So yes, this is basically a reminder to myself and all the other basically still-beginners out there: just keep pushing when something's not working - eventually, you will get it. Try not to get frustrated as it's a waste of energy. :)"],
-        
+
         ["That's it! More coming soon."]
-        
-          
+
+
       ]
     },
     {
@@ -83,22 +82,24 @@
       "date": "August 11, 2022",
       "image": "http://dummyimage.com/200x134.png/5fa2dd/ffffff",
       "readingTimeMinutes": 13,
-      "paragraphs": [["I let this blog sit inactive for a couple months. While my reasons for this are unsatisfying (even for myself), they amount to 'too many other things going on', and 'rushing to move forwards after learning/implementing/building something new rather than slowing down and documenting the process'.  However, I've learned my lesson. From now on, I'll be taking my time to write out any novel solutions I come up with (or find/put together from Google searches, and turn them into 'Content' right here! :)"],
+      "paragraphs": [
+        ["I let this blog sit inactive for a couple months. While my reasons for this are unsatisfying (even for myself), they amount to 'too many other things going on', and 'rushing to move forwards after learning/implementing/building something new rather than slowing down and documenting the process'.  However, I've learned my lesson. From now on, I'll be taking my time to write out any novel solutions I come up with (or find/put together from Google searches, and turn them into 'Content' right here! :)"],
 
-      ["Anyway, I might as well make today's post about the seemingly simple/trivial feature I was able to implement on this very blog just a few minutes ago. It actually took me a couple hours to work out. "],
+        ["Anyway, I might as well make today's post about the seemingly simple/trivial feature I was able to implement on this very blog just a few minutes ago. It actually took me a couple hours to work out. "],
 
-      ["While I am eventually planning to create a server/database for this blog to store my posts, for the time being they are stored in a JSON file. I wanted to implement some basic styling for the mapped blogposts. Also, in my original Blogger blog, I had the occasional screenshot of code included amongst the text, and I wanted to include these images in each Blogpost page in the same places they appeared in the original blog.   "],
+        ["While I am eventually planning to create a server/database for this blog to store my posts, for the time being they are stored in a JSON file. I wanted to implement some basic styling for the mapped blogposts. Also, in my original Blogger blog, I had the occasional screenshot of code included amongst the text, and I wanted to include these images in each Blogpost page in the same places they appeared in the original blog.   "],
+
+        ["The inline styling was straightforward enough and doesn't require a blog post:"],
+
+        ["dsf"],
+        ["However, just trying to get local images to render on the page was a whole other thing. Here's how I eventually got it to work:"],
+
+        ["in Blogpost.js (component conditionally rendered based on which blog post chosen):"],
+        ["img-json1.png"],
     
-      ["The inline styling was straightforward enough and doesn't require a blog post:"],
-
-      ["dsf"],
-      ["However, just trying to get local images to render on the page was a whole other thing. Here's how I eventually got it to work:"],
-
-      ["in Blogpost.js (component conditionally rendered based on which blog post chosen"],
-      ["sdfdsf"],
-      ["in the local JSON file"],
-      ["asd"],
-      ["**** will complete shortly."]
+        ["in the local JSON file, I simply entered the file path like so:"],
+        [" \"conditionalax-1. png\""],
+        ["this worked for me, so I guarantee it'll work for you too! hehe - no. if you have any problems, feel free to email me at matt.engerer@aol.com. Thx everyone."]
 
 
       ],
@@ -156,8 +157,10 @@
       "date": "",
       "image": "",
       "readingTimeMinutes": "",
-      "paragraphs": [["And then, in an example axios request: "],
-      [" const data = await axios.get(`${appUrl}/cart`);"]],
+      "paragraphs": [
+        ["And then, in an example axios request: "],
+        [" const data = await axios.get(`${appUrl}/cart`);"]
+      ],
       "tags": []
     },
     {
@@ -168,8 +171,10 @@
       "date": "",
       "image": "",
       "readingTimeMinutes": "",
-      "paragraphs": [["And then, in an example axios request: "],
-      [" const data = await axios.get(`${appUrl}/cart`);"]],
+      "paragraphs": [
+        ["And then, in an example axios request: "],
+        [" const data = await axios.get(`${appUrl}/cart`);"]
+      ],
       "tags": []
     },
     {
@@ -180,8 +185,10 @@
       "date": "",
       "image": "",
       "readingTimeMinutes": "",
-      "paragraphs": [["And then, in an example axios request: "],
-      [" const data = await axios.get(`${appUrl}/cart`);"]],
+      "paragraphs": [
+        ["And then, in an example axios request: "],
+        [" const data = await axios.get(`${appUrl}/cart`);"]
+      ],
       "tags": []
     },
     {
@@ -192,10 +199,12 @@
       "date": "",
       "image": "",
       "readingTimeMinutes": "",
-      "paragraphs": [["And then, in an example axios request: "],
-      [" const data = await axios.get(`${appUrl}/cart`);"]],
+      "paragraphs": [
+        ["And then, in an example axios request: "],
+        [" const data = await axios.get(`${appUrl}/cart`);"]
+      ],
       "tags": []
-    }, 
+    },
     {
       "id": 10,
       "author": "Matt Engerer",
@@ -204,8 +213,10 @@
       "date": "",
       "image": "",
       "readingTimeMinutes": "",
-      "paragraphs": [["And then, in an example axios request: "],
-      [" const data = await axios.get(`${appUrl}/cart`);"]],
+      "paragraphs": [
+        ["And then, in an example axios request: "],
+        [" const data = await axios.get(`${appUrl}/cart`);"]
+      ],
       "tags": []
     },
     {
@@ -216,8 +227,10 @@
       "date": "",
       "image": "",
       "readingTimeMinutes": "",
-      "paragraphs": [["And then, in an example axios request: "],
-      [" const data = await axios.get(`${appUrl}/cart`);"]],
+      "paragraphs": [
+        ["And then, in an example axios request: "],
+        [" const data = await axios.get(`${appUrl}/cart`);"]
+      ],
       "tags": []
     },
     {
@@ -269,7 +282,7 @@
       "image": "",
       "readingTimeMinutes": "",
       "tags": []
-    },{
+    }, {
       "id": 17,
       "author": "Matt Engerer",
       "title": "Placeholder to display pagination",
@@ -308,7 +321,7 @@
       "image": "",
       "readingTimeMinutes": "",
       "tags": []
-    },{
+    }, {
       "id": 21,
       "author": "Matt Engerer",
       "title": "Placeholder to display pagination",
@@ -446,7 +459,7 @@
       "image": "",
       "readingTimeMinutes": "",
       "tags": []
-    }, 
+    },
     {
       "id": 35,
       "author": "Matt Engerer",
@@ -516,7 +529,7 @@
       "image": "",
       "readingTimeMinutes": "",
       "tags": []
-    },{
+    }, {
       "id": 42,
       "author": "Matt Engerer",
       "title": "Placeholder to display pagination",
@@ -555,7 +568,7 @@
       "image": "",
       "readingTimeMinutes": "",
       "tags": []
-    },{
+    }, {
       "id": 46,
       "author": "Matt Engerer",
       "title": "Placeholder to display pagination",
@@ -604,4 +617,6 @@
       "image": "",
       "readingTimeMinutes": "",
       "tags": []
-    }]  }
+    }
+  ]
+}

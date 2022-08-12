@@ -22,16 +22,12 @@ import { useGlobalContext } from "../context/Context";
         }, [currentBlogPost]);
         
   return (
-    
     <li className={!title.includes('Placeholder') ? "blog" :"placeholder"} key={id}>
       <div >
         <div className="image-container">
-          {/* <img
-            src={``}
-          /> */}
+          {/* <img src={``} /> */}
           <p>By <i>{author}</i></p>
         </div>
-
         <h2 className={!title.includes('*NEW*') ? "" :"new"}>{title}</h2>
         <h3>Date: {date}</h3>
         <p className="blog-preview">Preview: {preview}...</p>
