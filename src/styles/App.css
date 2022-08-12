@@ -161,6 +161,15 @@ button:hover {
   width: 70vw;
 }
 
+.placeholder {
+  color: #1f1f1f;
+  padding: 1em;
+  margin: 1em;
+  list-style-type: none;
+  width: 70vw;
+  background-color: rgba(255, 255, 35, 0.5);
+}
+
 .pagination-wrapper {
   margin-top: 5em;
   display: -webkit-box;

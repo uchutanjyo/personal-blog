@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../context/Context";
 
 
- const BlogPostPreview = ({ author, title, preview, id }) => {
+ const BlogPostPreview = ({ author, date, title, preview, id }) => {
 
   const { setLoadingToTrue, isLoading, setIsLoading, currentBlogPost, setCurrentBlogPost, currentBlogPostId, setCurrentBlogPostId, isSettingBlogPost, setIsSettingBlogPost, setIsSettingId, isSettingId } = useGlobalContext();
 
@@ -22,7 +22,8 @@ import { useGlobalContext } from "../context/Context";
         }, [currentBlogPost]);
 
   return (
-    <li className="blog" key={id}>
+    
+    <li className={!title.includes('Placeholder') ? "blog" :"placeholder"} key={id}>
       <div className="blogpost">
         <div className="image-container">
           {/* <img
@@ -32,6 +33,7 @@ import { useGlobalContext } from "../context/Context";
         </div>
 
         <h2>{title}</h2>
+        <h3>Date: {date}</h3>
         <p className="blog-preview">Preview: {preview}...</p>
       
         <button className="go-to-post" id={id} onClick={handleClick}>

@@ -39,7 +39,7 @@ const BlogPost = () => {
 
             <div className="product-details-right-sidebar">
             <h3>Author: {author}</h3>
-
+            <h3>Date: {date}</h3>
             <h3> Title: {title}</h3>
 
               {paragraphs.map((paragraph) => {
@@ -48,6 +48,7 @@ const BlogPost = () => {
                   console.log(screenshot)
                   return <img src={require(`../blogimages/${screenshot}`)}  style={{height:'5em',}} />
                 }
+
                 return  <p key={id} style={{display:'flex', paddingTop:'.7em', lineHeight: '1.3em'}}>{paragraph}</p>
       })
 

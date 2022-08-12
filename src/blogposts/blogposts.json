@@ -69,13 +69,27 @@
 
       ["Anyway, I might as well make today's post about the seemingly simple/trivial feature I was able to implement on this very blog just a few minutes ago. It actually took me a couple hours to work out. "],
 
-      ["While I am eventually planning to create a server/database for this blog to store my posts, for the time being they are stored in a JSON file. I wanted to implement some basic styling for the mapped blogposts. Also, in my original Blogger blog, I had the occasional screenshot of code included amongst the text, and I wanted to include these images in each Blogpost page in the same places they appeared in the original blog.   "]],
+      ["While I am eventually planning to create a server/database for this blog to store my posts, for the time being they are stored in a JSON file. I wanted to implement some basic styling for the mapped blogposts. Also, in my original Blogger blog, I had the occasional screenshot of code included amongst the text, and I wanted to include these images in each Blogpost page in the same places they appeared in the original blog.   "],
+    
+      ["The inline styling was straightforward enough and doesn't require a blog post:"],
+
+      ["dsf"],
+      ["However, just trying to get local images to render on the page was a whole other thing. Here's how I eventually got it to work:"],
+
+      ["in Blogpost.js (component conditionally rendered based on which blog post chosen"],
+      ["sdfdsf"],
+      ["in the local JSON file"],
+      ["asd"],
+      ["**** will complete shortly."]
+
+
+      ],
       "tags": []
     },
     {
       "id": 5,
       "author": "Matt Engerer",
-      "title": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
+      "title": "Placeholder to display pagination",
       "preview": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue.",
       "date": "1641217936000",
       "image": "",
@@ -296,7 +310,7 @@
     }, {
       "id": 26,
       "author": "Matt Engerer",
-      "title": "xx",
+      "title": "Placeholder to display pagination",
       "preview": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
       "date": "1634439025000",
       "image": "",
@@ -306,7 +320,7 @@
     {
       "id": 27,
       "author": "Matt Engerer",
-      "title": "Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor.",
+      "title": "Placeholder to display pagination",
       "preview": "Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique.",
       "date": "1630299425000",
       "image": "http://dummyimage.com/200x134.png/5fa2dd/ffffff",
@@ -326,7 +340,7 @@
     {
       "id": 29,
       "author": "Matt Engerer",
-      "title": "Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+      "title": "Placeholder to display pagination",
       "preview": "Proin at turpis a pede posuere nonummy. Integer non velit.",
       "date": "1642895680000",
       "image": "http://dummyimage.com/200x134.png/5fa2dd/ffffff",
@@ -336,7 +350,7 @@
     {
       "id": 30,
       "author": "Matt Engerer",
-      "title": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
+      "title": "Placeholder to display pagination",
       "preview": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue.",
       "date": "1641217936000",
       "image": "",
