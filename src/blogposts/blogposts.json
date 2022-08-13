@@ -5,11 +5,12 @@
   "posts": [{
       "id": 1,
       "author": "Matt Engerer",
-      "title": "Conditional Axios-Request/Response URL based on whether server running locally or remotely - React, Express.js, process.env.NODE_ENV",
+      "title": "Conditional Axios-Request/Response URL based on whether server running locally or remotely",
       "preview": "Wow, that was a long post-title- which probably doesn't properly explain what I did, but it made sense in my head. It's been a long time since I wrote anything here",
       "date": "June 2, 2022",
       "image": "",
       "readingTimeMinutes": 9,
+      "tags": ["React, production/development, Axios, Express.js, process.env.NODE_ENV" ],
       "paragraphs": [
         ["Wow, that was a long post-title- which probably doesn't properly explain what I did, but it made sense in my head. It's been a long time since I wrote anything here"],
 
@@ -40,19 +41,17 @@
 
         ["I hope this helps out anyone who stumbles upon this who is stuck like I was - creating this developer-production environment with React and Express was actually quite a bit simpler than I'd originally thought."]
 
-      ],
-
-
-      "tags": []
+      ]
     },
     {
       "id": 2,
       "author": "Matt Engerer",
-      "title": "A Note to Self on Persistence - MySQL",
+      "title": "Password Change in Ubuntu Terminal - MySQL",
       "preview": "Just a quick note to self (and anyone else who struggles with setting up their dev environment in any capacity",
       "date": "May 6, 2022",
       "image": "",
       "readingTimeMinutes": 12,
+      "tags": ["Ubuntu, Terminal, MySQL, not a very helpful article" ],
       "paragraphs": [
         ["Just a quick note to self (and anyone else who struggles with setting up their dev environment in any capacity): when it comes to getting stuck, persistence really is what is required to move forward in most cases!"],
 
@@ -85,30 +84,29 @@
       "paragraphs": [
         ["I let this blog sit inactive for a couple months. While my reasons for this are unsatisfying (even for myself), they amount to 'too many other things going on', and 'rushing to move forwards after learning/implementing/building something new rather than slowing down and documenting the process'.  However, I've learned my lesson. From now on, I'll be taking my time to write out any novel solutions I come up with (or find/put together from Google searches, and turn them into 'Content' right here! :)"],
 
-        ["Anyway, I might as well make today's post about the seemingly simple/trivial feature I was able to implement on this very blog just a few minutes ago. It actually took me a couple hours to work out. "],
+        ["Anyway, I might as well make today's post about the seemingly simple/trivial feature I was able to implement on this very blog just a few minutes ago. It actually took me a couple hours to work out. This blog was created with React hooks & functional components, and so the code found below corresponds to React/JSX."],
 
         ["While I am eventually planning to create a server/database for this blog to store my posts, for the time being they are stored in a JSON file. I wanted to implement some basic styling for the mapped blogposts. Also, in my original Blogger blog, I had the occasional screenshot of code included amongst the text, and I wanted to include these images in each Blogpost page in the same places they appeared in the original blog.   "],
 
-        ["The inline styling was straightforward enough and doesn't require a blog post:"],
-
-        ["dsf"],
-        ["However, just trying to get local images to render on the page was a whole other thing. Here's how I eventually got it to work:"],
+        ["The inline styling was straightforward enough and doesn't require a blog post. However, just trying to get local images to render on the page was a whole other thing. Here's how I eventually got it to work:"],
 
         ["in Blogpost.js (component conditionally rendered based on which blog post chosen):"],
         ["img-json1.png"],
     
         ["in the local JSON file, I simply entered the file path like so:"],
-        [" \"conditionalax-1. png\""],
-        ["this worked for me, so I guarantee it'll work for you too! hehe - no. if you have any problems, feel free to email me at matt.engerer@aol.com. Thx everyone."]
+        [" \"conditionalax-1. png\" (minus the space before png)"],
+        ["Essentially, if the JSON string contains '. png', React knows to render an <img> element rather than a <li> element for that 'paragraph'. This was the easy part for me - the annoying part was getting the path string exactly as it needed to be."],
+        ["I think there's a pretty slim chance that anyone will actually be seeking out this information in this day & age - most developers (even at my level) are likely storing their blogposts in some kind of database, not a JSON file - but, whatever! Hope this solution helps someone, sometime. :)"],
+        ["If you have any issues, feel free to email me at matt.engerer@aol.com. Thx everyone."]
 
 
       ],
-      "tags": []
+      "tags": ["JSON, React, JSX, inline styling, conditional rendering, styling text & images from local JSON file"]
     },
     {
       "id": 5,
       "author": "Matt Engerer",
-      "title": "Successful Immediate-Updating of Cart Item Quantity in State, Rendering on Cart Page (React Router, Express)",
+      "title": "Successful Immediate-Updating of Cart Item Quantity in State, Rendering on Cart Page",
       "preview": " just managed to get something work which seems to be a very common issue among React beginners..",
       "date": "May 3, 2022",
       "image": "",
@@ -147,7 +145,7 @@
 
         ["Matt"]
       ],
-      "tags": ["hardware", "politics"]
+      "tags": ["React, updating state, useEffect, React router, Express "]
     },
     {
       "id": 6,

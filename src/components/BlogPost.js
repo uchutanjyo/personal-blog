@@ -21,9 +21,9 @@ const BlogPost = () => {
                 <div className="">{/* <img src={} alt="description" /> */}</div>
               </div>
               <div className="product-details-right-sidebar">
-                <h3>Author: {author}</h3>
-                <h3>Date: {date}</h3>
-                <h3> Title: {title}</h3>
+                <h3><u>Author</u>: {author}</h3>
+                <h3><u>Date:</u> {date}</h3>
+                <h3> <u>Tags:</u> {tags}</h3>
 
                 {paragraphs.map((paragraph) => {
                   if (paragraph[0].includes(".png")) {
