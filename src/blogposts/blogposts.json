@@ -82,7 +82,7 @@
       "image": "http://dummyimage.com/200x134.png/5fa2dd/ffffff",
       "readingTimeMinutes": 13,
       "paragraphs": [
-        ["I let this blog sit inactive for a couple months. While my reasons for this are unsatisfying (even for myself), they amount to 'too many other things going on', and 'rushing to move forwards after learning/implementing/building something new rather than slowing down and documenting the process'.  However, I've learned my lesson. From now on, I'll be taking my time to write out any novel solutions I come up with (or find/put together from Google searches, and turn them into 'Content' right here! :)"],
+        ["I let this blog sit inactive for a couple months. While my reasons for this are unsatisfying (even for myself), they amount to 'too many other things going on', and 'rushing to move forwards after learning/implementing/building something new rather than slowing down and documenting the process'.  However, I've learned my lesson. From now on, I'll be taking my time to write out any novel solutions I come up with (or find/put together from Google searches), and turn them into 'Content' right here! :)"],
 
         ["Anyway, I might as well make today's post about the seemingly simple/trivial feature I was able to implement on this very blog just a few minutes ago. It actually took me a couple hours to work out. This blog was created with React hooks & functional components, and so the code found below corresponds to React/JSX."],
 
