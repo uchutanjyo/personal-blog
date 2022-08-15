@@ -87,9 +87,10 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 80vw;
+  width: 60vw;
+  margin-left: 5em;
   margin-top: 5em;
-  padding: 1em;
+  padding: 2em;
   background-image: url("../../public/code.png");
   background-size: contain;
   background-repeat: initial;
@@ -109,9 +110,8 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 2em;
   background-color: azure;
-  font-size: 10em;
+  font-size: 8em;
   letter-spacing: .7em;
   padding: .4em;
 }
@@ -147,6 +147,7 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 1em;
   letter-spacing: .2em;
   font-size: .2em;
   letter-spacing: .1em;
