@@ -15,7 +15,7 @@ const BlogPost = () => {
           const { id, title, author, date, paragraphs, image, tags } = blog;
           if (paragraphs === undefined) return <Error />;
           return (
-            <div className="blog-post">
+            <div className="blog-post" >
               <div>
                 <h2>{`${title.substring(0, 100)}`.toUpperCase()}</h2>
                 <div className="">{/* <img src={} alt="description" /> */}</div>
@@ -41,13 +41,15 @@ const BlogPost = () => {
                     );
                   }
                   return (
-                    <p
+                    <p className="blog-paragraph"
                       key={id}
                       style={{
                         display: "flex",
                         paddingTop: ".7em",
                         lineHeight: "1.3em",
+                        
                       }}
+             
                     >
                       {paragraph}
                     </p>

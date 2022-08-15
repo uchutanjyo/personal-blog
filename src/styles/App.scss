@@ -226,6 +226,8 @@ letter-spacing: .1em;
       min-height: 4vh;
   }
 
+
+
   .Nav-links {
       flex-direction: row;
       margin-top: 0em;
@@ -273,6 +275,12 @@ letter-spacing: .1em;
   }
 
   .blogpost-container {
+  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    img {
+      max-width: 110%;
+    }
   }
   
   .pagination-wrapper {
@@ -304,9 +312,22 @@ font-size: 1em;
 
   .blog-post {
     font-size: 1em;
-    max-width: 85vw;
+    max-width: 95vw;
+    overflow-x: contain;
 
   }
+
+  .about {
+    font-size: 1em;
+  }
+
+  .contact {
+
+      font-size: 1em;
+    
+  }
+
+
 
   .section {
       display: flex;

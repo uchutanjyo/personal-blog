@@ -370,6 +370,13 @@ button:hover {
   .top-header-3 {
     font-size: .4em;
   }
+  .blogpost-container {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .blogpost-container img {
+    max-width: 110%;
+  }
   .pagination-wrapper {
     width: 50%;
   }
@@ -393,7 +400,14 @@ button:hover {
   }
   .blog-post {
     font-size: 1em;
-    max-width: 85vw;
+    max-width: 95vw;
+    overflow-x: contain;
+  }
+  .about {
+    font-size: 1em;
+  }
+  .contact {
+    font-size: 1em;
   }
   .section {
     display: -webkit-box;
