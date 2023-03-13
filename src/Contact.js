@@ -11,8 +11,7 @@ const Contact = () => {
     <div className="blogpost-container">
   
     <div className="about">
-   Give me a SHOUT at <p>matt.engerer@aol.com</p> or<p> 416 _________ .</p>
-          </div>
+  matt.engerer@gmail.com          </div>
       </div>
     </>
   );
